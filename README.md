@@ -1,5 +1,4 @@
 ✨ Cadastro de Usuários | React App
-
 Cadastro de Usuários é uma aplicação React moderna e eficiente, projetada para gerenciar dados de usuários de maneira intuitiva. Com uma interface limpa e interativa, este projeto facilita o cadastro, visualização e manipulação de informações de usuários. Ideal para quem deseja aprender ou aprimorar suas habilidades com React, ou integrar uma funcionalidade de cadastro em seus próprios projetos.
 
 🛠️ Tecnologias Utilizadas
@@ -7,7 +6,6 @@ React: Biblioteca JavaScript para a construção de interfaces de usuário dinâ
 React Router: Navegação entre diferentes páginas da aplicação.
 CSS (ou Styled-Components): Para uma estilização elegante e responsiva.
 LocalStorage/Backend API (se aplicável): Persistência dos dados dos usuários.
-
 📦 Funcionalidades
 Cadastro de Usuários: Crie novos usuários com informações como nome, email, etc.
 Listagem de Usuários: Visualize todos os usuários cadastrados em uma tabela de fácil leitura.
@@ -17,19 +15,19 @@ Validação de Formulários: Certifique-se de que todos os campos obrigatórios 
 🚀 Como Rodar o Projeto Localmente
 Para executar este projeto em sua máquina local, siga os passos abaixo:
 
-Clone o repositório:
+Clone o repositório
 
 git clone https://github.com/GabrielDevelop777/cadastro-usuarios.git
 
-Navegue até o diretório do projeto:
+Navegue até o diretório do projeto
 
 cd cadastro-usuarios
 
-Instale as dependências:
+Instale as dependências
 
 npm install
 
-Inicie o servidor de desenvolvimento:
+Inicie o servidor de desenvolvimento
 
 npm start
 
@@ -63,12 +61,13 @@ Abra um Pull Request explicando suas alterações.
 ⚠️ Considerações Finais
 Este projeto está em constante evolução! A cada nova versão, mais funcionalidades serão adicionadas.
 Feedbacks e contribuições são muito bem-vindos para que possamos melhorar cada vez mais a aplicação.
-
 📃 Licença
 Este projeto é licenciado sob a MIT License.
 
 📬 Contato
 Entre em contato com o desenvolvedor para perguntas, sugestões ou colaboração:
 
+GitHub: @GabrielDevelop777
+Email: gabrieldevelop777@email.com (substitua por seu email real)
 🌟 Agradecimentos
 Agradeço por explorar o repositório e espero que este projeto seja útil para o seu aprendizado ou para seu uso em produção. Se você achar que algo pode ser melhorado, sinta-se à vontade para abrir uma issue ou pull request!
