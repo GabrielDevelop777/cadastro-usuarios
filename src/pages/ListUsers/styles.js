@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 export const Container = styled.div`
         background: radial-gradient(61.11% 202.56% at 50% 49.95%, rgba(240, 240, 240, 0.7) 43%, rgba(2, 70, 98, 0.7) 62.5%);
@@ -9,7 +8,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: space-evenly;
         padding: 20px;
-`
+`;
 
 export const Title = styled.h2`
         color:rgb(0, 0, 0);
@@ -19,7 +18,7 @@ export const Title = styled.h2`
         font-weight: 600;
         margin-top: 120px;
         margin-bottom: 20px;
-`
+`;
 
 export const ContainerUsers = styled.div`
         display: grid;
@@ -29,7 +28,7 @@ export const ContainerUsers = styled.div`
     @media (max-width: 750px){
         grid-template-columns: 1fr;
     }
-`
+`;
 
 export const CardUsers = styled.div`
         background-color: #dbdbdb;
@@ -50,7 +49,7 @@ export const CardUsers = styled.div`
             font-size: 14px;
             font-weight: 200;
         }
-`
+`;
 
 export const TrashIcon = styled.img`
     cursor: pointer;
@@ -66,8 +65,8 @@ export const TrashIcon = styled.img`
         transform: translateY(2px);  /* Move o ícone um pouco para baixo (efeito de "afundar") */
         opacity: 0.5;  /* Torna o ícone ainda mais transparente quando pressionado */
     }
-`
+`;
 
 export const AvatarUser = styled.img`
         height: 80px;
-`
+`;

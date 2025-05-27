@@ -1,6 +1,6 @@
-    import styled from "styled-components";
+import styled from "styled-components";
 
-    export const Background = styled.div`
+export const Background = styled.div`
         height: 30vh;
         width: 100vw;
         border-radius: 30px;
@@ -13,4 +13,4 @@
         margin-top: 80px;
 
     }
-    `
+    `;

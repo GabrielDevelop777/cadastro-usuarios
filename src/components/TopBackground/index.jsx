@@ -1,14 +1,12 @@
-import UsersImage from "../../assets/manutence.png"
-import { Background } from "./styles"
+import UsersImage from "../../assets/manutence.png";
+import { Background } from "./styles";
 
-
-function TopBackground(){
-
-    return (
-               <Background>
-                  <img src={UsersImage} alt="imagem-usuarios" />
-                </Background>
-    )
+function TopBackground() {
+	return (
+		<Background>
+			<img src={UsersImage} alt="imagem-usuarios" />
+		</Background>
+	);
 }
 
-export default TopBackground
+export default TopBackground;
