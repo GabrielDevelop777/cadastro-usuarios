@@ -28,13 +28,12 @@ async function registerNewUser() {
 			name: inputName.current.value,
 		});
 
-		// Alerta de sucesso
 		await Swal.fire({
 			icon: 'success',
 			title: 'Usuário criado!',
 			text: 'O usuário foi cadastrado com sucesso.',
-			showConfirmButton: false,
-			timer: 2000,
+			showConfirmButton: true,
+			timer: null,
 		});
 
 		navigate("/lista-de-usuarios");
@@ -65,7 +64,7 @@ async function registerNewUser() {
 			<TopBackground />
 
 			<Form>
-				<Title>Cadastrar Usuário</Title>
+				<Title>CADASTRAR USUÁRIO</Title>
 
 				<ContainerInputs>
 					<div>

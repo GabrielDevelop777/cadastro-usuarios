@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Button from "../../components/Button";
 import TopBackground from "../../components/TopBackground";
+import Swal from 'sweetalert2';
 import {
 	Container,
 	Title,
@@ -26,13 +27,27 @@ function ListUsers() {
 		getUsers();
 	}, []);
 
-	async function deleteUsers(id) {
+async function deleteUsers(id) {
+	try {
 		await api.delete(`/usuarios/${id}`);
 
 		const updataUsers = users.filter((user) => user.id !== id);
-
 		setUsers(updataUsers);
+
+		Swal.fire({
+			icon: 'success',
+			title: 'Usuário deletado!',
+			text: 'O usuário foi removido com sucesso.',
+			showConfirmButton: true,
+		});
+	} catch (error) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Não foi possível deletar o usuário.',
+		});
 	}
+}
 
 	return (
 		<Container>
@@ -47,8 +62,8 @@ function ListUsers() {
 						/>
 						<div>
 							<h3>{user.name}</h3>
-							<p>{user.age}</p>
-							<p>{user.email}</p>
+							<p>Idade: {user.age}</p>
+							<p>Email: {user.email}</p>
 						</div>
 						<TrashIcon
 							onClick={() => deleteUsers(user.id)}

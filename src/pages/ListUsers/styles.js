@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-        background: radial-gradient(61.11% 202.56% at 50% 49.95%, rgba(240, 240, 240, 0.7) 43%, rgba(2, 70, 98, 0.7) 62.5%);
+        background: #E0D3FF;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -13,9 +13,9 @@ export const Container = styled.div`
 export const Title = styled.h2`
         color:rgb(0, 0, 0);
         text-align: center;
-        font-size: 38px;
+        font-size: 2.4rem;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 120px;
         margin-bottom: 20px;
 `;
@@ -31,14 +31,14 @@ export const ContainerUsers = styled.div`
 `;
 
 export const CardUsers = styled.div`
-        background-color: #dbdbdb;
+        background-color: #fff;
         padding: 16px;
         border-radius: 32px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        max-width: 380px;
+        max-width: 400px;
 
         h3 {
             font-size: 24px;
@@ -47,7 +47,7 @@ export const CardUsers = styled.div`
 
         p {
             font-size: 14px;
-            font-weight: 200;
+            font-weight: 400;
         }
 `;
 

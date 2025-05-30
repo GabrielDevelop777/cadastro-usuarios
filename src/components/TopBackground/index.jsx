@@ -1,4 +1,4 @@
-import UsersImage from "../../assets/manutence.png";
+import UsersImage from "../../assets/user.png";
 import { Background } from "./styles";
 
 function TopBackground() {

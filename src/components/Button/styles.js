@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
         border:${(props) => (props.theme === "primary" ? "none" : "1px solid #000")};
-        background-color:${(props) => (props.theme === "primary" ? "#5CC5F2" : "transparent")};  
+        background-color:${(props) => (props.theme === "primary" ? "#9B6BFF" : "transparent")};  
         font-size: 16px;
         font-weight: 600;
         color: #000;
@@ -11,11 +11,12 @@ export const Button = styled.button`
         cursor: pointer;
         border-radius: 30px;
         margin-top: 20px;
+        transition: 0.8s;
 
     &:hover {
-        opacity: ${(props) => (props.theme === "secundary" ? "#5CC5F2" : "0.7")};
-        background-color: ${(props) => (props.theme === "secundary" || props.theme === "terciario" ? "#5CC5F2" : "opacity")}; 
-        color: ${(props) => (props.theme === "secundary" || props.theme === "terciario" ? "#fff" : "#000")};
+        opacity: ${(props) => (props.theme === "secundary" ? "#9B6BFF" : "0.5")};
+        background-color: ${(props) => (props.theme === "secundary" || props.theme === "terciario" ? "#9B6BFF" : "opacity")}; 
+        color: ${(props) => (props.theme === "secundary" || props.theme === "terciario" ? "#fff" : "#fff")};
      }
 
     &:active {

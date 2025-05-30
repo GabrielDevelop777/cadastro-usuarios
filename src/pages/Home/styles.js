@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-        background: radial-gradient(61.11% 202.56% at 50% 49.95%, rgba(240, 240, 240, 0.7) 43%, rgba(2, 70, 98, 0.7) 62.5%);
+        background-color: #E0D3FF;  
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,9 +21,9 @@ export const Form = styled.form`
 export const Title = styled.h2`
         color:rgb(0, 0, 0);
         text-align: center;
-        font-size: 38px;
+        font-size: 2.4rem;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 110px;
     `;
 
