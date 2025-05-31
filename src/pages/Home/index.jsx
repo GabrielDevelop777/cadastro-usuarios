@@ -31,7 +31,7 @@ async function registerNewUser() {
 		await Swal.fire({
 			icon: 'success',
 			title: 'Usuário criado!',
-			text: 'O usuário foi cadastrado com sucesso.',
+			text: 'O usuário foi cadastrado com sucesso!',
 			showConfirmButton: true,
 			timer: null,
 		});
@@ -39,23 +39,57 @@ async function registerNewUser() {
 		navigate("/lista-de-usuarios");
 
 	} catch (error) {
-	console.error("Erro ao cadastrar usuário:", error);
+		console.error("Erro ao cadastrar usuário:", error);
 
-	if (error.response && error.response.status === 409) {
-		const mensagem = error.response.data?.error || "E-mail já cadastrado.";
-		Swal.fire({
-			icon: 'warning',
-			title: 'E-mail em uso!',
-			text: mensagem,
-		});
-	} else {
-		Swal.fire({
-			icon: 'error',
-			title: 'Erro!',
-			text: 'Email já cadastrado.',
-		});
+		if (error.response) {
+			const status = error.response.status;
+			const mensagem = error.response.data?.error || "Erro desconhecido";
+
+			switch (status) {
+				case 400:
+					// Captura erros de validação (campos obrigatórios ou idade < 18)
+					Swal.fire({
+						icon: 'warning',
+						title: 'Dados inválidos!',
+						text: mensagem,
+					});
+					break;
+
+				case 409:
+					// Email já em uso
+					Swal.fire({
+						icon: 'warning',
+						title: 'E-mail em uso!',
+						text: mensagem,
+					});
+					break;
+
+				case 500:
+					// Erro interno do servidor
+					Swal.fire({
+						icon: 'error',
+						title: 'Erro do servidor!',
+						text: 'Ocorreu um erro interno. Tente novamente.',
+					});
+					break;
+
+				default:
+					// Outros erros
+					Swal.fire({
+						icon: 'error',
+						title: 'Erro!',
+						text: mensagem,
+					});
+			}
+		} else {
+			// Erro de rede ou outro tipo
+			Swal.fire({
+				icon: 'error',
+				title: 'Erro de conexão!',
+				text: 'Verifique sua conexão com a internet.',
+			});
+		}
 	}
-}
 
 }
 
@@ -80,7 +114,7 @@ async function registerNewUser() {
 						</InputLabel>
 						<Input
 							type="number"
-							placeholder="idade do usuario"
+							placeholder="Idade do usuário"
 							ref={inputAge}
 						/>
 					</div>
